@@ -13,12 +13,15 @@ const main = async(arg) =>{
     
     const NameContract = new web3.eth.Contract(JSON.parse(abi), address);
     const currentName = await NameContract.methods.getName().call();
-    await NameContract.methods.setName("NewNamenaja").send({from: accounts[0]});
+    let txHash
+    await NameContract.methods.setName("NewNamenaja").send({from: accounts[0]}, (error, transactionHash) => { txHash = transactionHash });
     const newName = await NameContract.methods.getName().call();
     
     //show result
-    console.log("currentName: " + currentName)
-    console.log("newName: " + newName)
+    console.log("============================")
+    console.log("txHash: ", txHash)
+    console.log("currentName: ", currentName)
+    console.log("newName: ", newName)
 
 }
 

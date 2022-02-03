@@ -33,10 +33,13 @@ const main = async() =>{
     console.log(contract)
     const accounts = await web3.eth.getAccounts();
     const account = accounts[0];
-    const receipt = await contract.deploy({data: bytecode}).send({from: account, gas: 1500000, gasPrice: '30000000'})
-    console.log(receipt);
-    console.log(receipt._address);
-    console.log(abi)
+    let txHash;
+    const receipt = await contract.deploy({data: bytecode}).send({from: account, gas: 1500000, gasPrice: '30000000'}, (error,transactionHash) => { txHash = transactionHash })
+    console.log("=====================================")
+    console.log("=====================================")
+    console.log("TxHash: ", txHash);
+    console.log("Address: ", receipt._address);
+    console.log("ABI: ", abi)
     fs.writeFileSync(`output/${receipt._address}`, JSON.stringify(abi));
     //const NameContract = new web3.eth.Contract(abi, receipt._address);
     //const currentName = await NameContract.methods.getName().call();
