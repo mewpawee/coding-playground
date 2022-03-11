@@ -9,13 +9,13 @@ const main = async(arg) => {
     const currentBlock = await web3.eth.getBlockNumber();
 
     switch(arg[0]){
-     case "block":
-        const targetDate = arg[1] ||"3/1/2022, 10:30:00 AM"
-        guessBlock(targetDate, currentBlock, blockTime);
+     case "timestamp":
+        const targetTimestamp = arg[1] ||1648740600000
+        guessDate(targetTimestamp, currentBlock, blockTime);
         break;
-     case "date":
+     case "block":
         const targetBlock = arg[1] || 4332712
-        guessDate(targetBlock, currentBlock, blockTime);
+        guessBlock(targetBlock, currentBlock, blockTime);
         break;
      default:
         console.log("Incorrect Command")
@@ -26,10 +26,11 @@ const getBlock = (number) => {
     return web3.eth.getBlock(number)
 }
 
-const guessBlock = (targetDate, currentBlock, blockTime) => {
+const guessDate = (targetTimestamp, currentBlock, blockTime) => {
+    const tt = parseInt(targetTimestamp);
     const ct = Date.now();
     const currentDate = new Date(ct).toLocaleString();
-    const tt = new Date(targetDate).getTime();
+    const targetDate = new Date(tt).toLocaleString();
     const secDiff = (tt - ct)/1000 
     const blockDiff = Math.floor(secDiff/blockTime)
     const targetBlock = currentBlock + blockDiff
@@ -40,7 +41,7 @@ const guessBlock = (targetDate, currentBlock, blockTime) => {
     console.log("Target Block: ", targetBlock);
 }
 
-const guessDate = (targetBlock, currentBlock, blockTime) => {
+const guessBlock = (targetBlock, currentBlock, blockTime) => {
     const blockDiff = targetBlock - currentBlock
     const millisecDiff = blockDiff * blockTime * 1000
     const ct = Date.now();
