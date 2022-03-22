@@ -7,7 +7,7 @@ const web3 = new Web3(web3Provider);
 const main = async(arg) => {
     console.log('RPC: ', rpc + '\n')
     const currentBlock = await web3.eth.getBlockNumber();
-
+    console.log('BlockTime: ', blockTime);
     switch(arg[0]){
      case "timestamp":
         const targetTimestamp = arg[1] ||1648740600000
@@ -32,7 +32,8 @@ const guessDate = (targetTimestamp, currentBlock, blockTime) => {
     const currentDate = new Date(ct).toLocaleString();
     const targetDate = new Date(tt).toLocaleString();
     const secDiff = (tt - ct)/1000 
-    const blockDiff = Math.floor(secDiff/blockTime)
+    const blockDiff = secDiff/blockTime
+    console.log(blockDiff);
     const targetBlock = currentBlock + blockDiff
     console.log("Current Date: ", currentDate);
     console.log("Target Date: ", targetDate);
