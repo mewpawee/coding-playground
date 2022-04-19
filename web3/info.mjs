@@ -1,5 +1,5 @@
 import Web3 from 'web3'; 
-const web3Provider = new Web3.providers.HttpProvider(process.env.provider);
+const web3Provider = new Web3.providers.HttpProvider(process.env.rpc);
 const web3 = new Web3(web3Provider);
 
 const main = async() => {
