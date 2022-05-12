@@ -1,0 +1,12 @@
+(namespace 'free)
+
+(module someModuleName AUTONOMOUS
+
+  (defcap AUTONOMOUS ()
+    true)
+
+  (defun dummy ()
+    (+ 1 2)
+  )
+)
+
