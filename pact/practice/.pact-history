@@ -1,3 +1,17 @@
+exit
+(load "myspace.pact" )
+ls
+(load "myspace.pact" )
+ls
+dummy
+(dummy)
+(free.dummy)
+free.dummy
+(load "test.pact")
+exit
+ls
+(load "test.pact")
+(load test.pact)
 (testFunc.dummy)
 (testFunc.dummy)
 (testFunc.dummy)
@@ -84,17 +98,3 @@ exit
   { "type": "cat", "name": "Scratchy", "age": 6 }
 [
 { "type": "cat", "name": "Scratchy", "age": 6 }
-["hi",2,4]
-true
-'hello
-"hello
-'hello
-`hello
-'hello
-"hello"
-hello
-25.3
-19
-exit
-(helloWorld)
-(hello_world)

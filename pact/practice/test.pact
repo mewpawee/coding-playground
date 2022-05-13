@@ -1,4 +1,4 @@
-(namespace 'free)
+(define-namespace 'free)
 
 (module someModuleName AUTONOMOUS
 
