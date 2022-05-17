@@ -34,7 +34,7 @@ const main = async() =>{
     const accounts = await web3.eth.getAccounts();
     const account = accounts[0];
     let txHash;
-    const receipt = await contract.deploy({data: bytecode}).send({from: account, gas: 1500000, gasPrice: '30000000'}, (error,transactionHash) => { txHash = transactionHash })
+    const receipt = await contract.deploy({data: bytecode}).send({from: account}, (error,transactionHash) => { txHash = transactionHash })
     console.log("=====================================")
     console.log("=====================================")
     console.log("TxHash: ", txHash);

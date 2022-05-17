@@ -14,7 +14,9 @@ const main = async(arg) =>{
     const NameContract = new web3.eth.Contract(JSON.parse(abi), address);
     const currentName = await NameContract.methods.getName().call();
     let txHash
-    await NameContract.methods.setName("NewNamenaja").send({from: accounts[0]}, (error, transactionHash) => { txHash = transactionHash });
+    // await NameContract.methods.setName("NewNamenaja").send({from: accounts[0]}, (error, transactionHash) => { txHash = transactionHash });
+    const test = await NameContract.methods.setName("NewNamenaja").estimateGas({from: accounts[0]})
+    console.log("test: ", test)
     const newName = await NameContract.methods.getName().call();
     
     //show result

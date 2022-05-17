@@ -1,100 +1,100 @@
 exit
-(load "myspace.pact" )
-ls
-(load "myspace.pact" )
-ls
-dummy
-(dummy)
-(free.dummy)
-free.dummy
-(load "test.pact")
+(chain-data)
+(chain-data)
+(chaindata)
+chaindata
 exit
-ls
-(load "test.pact")
-(load test.pact)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.dummy)
-(testFunc.AUTONOMOUS)
-testFunc.AUTONOMOUS
-(load "a.pact")
-(testFunc)
-(someFunc)
-someFunc
-a.pact
-(load "a.pact")
-ls
-(load "hello_world.pact")
-(load "test.pact")
-(load test.pact)
-exit
-(format "My {} has {}" ["dog","cat"])
-(format "My {} has {}" ["dog","cat"])
-(map (/ [1 2 3] 2))
-(map [1 2 3] (/ 2))
-(map (* 2) [1 2 3])
-(map (// 2) [1 2 3])
-(map (/ 2) [1 2 3])
-(map (/2) [1 2 3])
-[1,2,3]
-[1 2 3]
-(bind { "a": 1, "b": 2 } { "b" := b-value } b-value)
-(bind { "a": 1, "b": 2 } { "a" := b-value } b-value)
-(bind { "a": 1, "b": 2 } { "a" := a-value } b-value)
+(bind { 'a:1, 'b:2 } { 'a := result } result)
+(bind { 'a:1, 'b:2 } { 'a := a-value } a-value)
 (bind { "a": 1, "b": 2 } { "a" := a-value } a-value)
-(at "key" {"key":123,"test":"hi"})
-(at 3 [1,2,3])
-(at 2 [1,2,3])
-(at 1 [1,2,3])
-)
-    (format "Hello {}!" [name]))
-    "Do the hello-world dance"
-  (defun hello (name)
-  "A smart contract to greet the world."
-(module helloWorld
-)
-    (format "Hello {}!" [name]))
-    "Do the hello-world dance"
-  (defun hello (name)
-(module helloWorld   "A smart contract to greet the world."
-    (format "Hello {}!" [name]))
-    "Do the hello-world dance"
-  (defun hello (name)
-  "A smart contract to greet the world."
-(module helloWorld 'admin-keyset
-)
-    (format "Hello {}!" [name]))
-  (defun hello (name)
-(module helloWorld 'admin-keyset
-(format-time "%Y-%m-%d" (time "2016-07-23T13:30:45Z"))
-(format-time "%Y-%m-%dT%H:%M" (time "2016-07-23T13:30:45Z"))
-(format-time "%Y-%m-%dT%H:%M:%S%N" (time "2016-07-23T13:30:45Z"))
-(time "2016-07-23T13:30:45Z")
-(format-time "%Y-%m-%d (time "2016-07-23T13:30:45Z"))
-(format-time "%Y-%m-%d 123)
-(format-time "%Y-%m-%d "123")
-(format-time "%Y-%m-%d "asdf")
-(format-time "%Y-%m-%d asdf)
-(format-time "%Y-%m-%d)
-  ]
-  { "type": "dog", "name": "Fluffy", "age": 3 }
-  { "type": "cat", "name": "Scratchy", "age": 6 }
-[
-{ "type": "cat", "name": "Scratchy", "age": 6 }
+'(bind { "a": 1, "b": 2 } { "a" := a-value } a-value)"
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+exit
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(format "My {} has" ["dog"])
+(format "My {} has {}" ["dog" "fleas"])
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact")
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+exit
+exi
+(let ((x 2)) (+ x 1))
+(let* ([x 2]) (+ x 1))
+(let* [x 2] (+ x 1))
+(let* px 2] (+ x 1))
+[1 2]
+([1 2])
+((1 2))
+(1 2)
+(let* ((x 2)) (+ x 1))
+(let* (x 2) (+ x 1))
+(let* ((x 2)) (+ x 1))
+(let* ((x 2)))
+  (+ x y))
+       (y (* x 10)))
+(let* ((x 2)
+(let* ((a 1) (b 2)))
+(let* ((a 1)))
+(let* (a 1))
+((a 1))
+(a 1)
+(let ((a 1)))
+(let (a 1))
+(let a 1)
+let a 1
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+(load "pact-function.pact" )
+ls
+(load "pact-function.pact" )
+ls
+(load "pact-function.pact" )
+(load "pact-function.pact")
+ls
+'hte
+"htest
+(load "pact-function.pact")
+(load "pact-function.pact")
+ls
+(load "pact-function.pact")
+exit
+:q!
+(bind {"a": 1, "b":2})
+{"a": 1, "b":2}
+{"a": 1, b:2}
+{"a": 1, "b":2}
+({"a": 1, "b":2})
