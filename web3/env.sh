@@ -1,1 +1,1 @@
-export provider="http://43.225.143.120:8545"
+export rpc="http://49.0.198.24:8545"
