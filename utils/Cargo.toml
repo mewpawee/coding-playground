@@ -1,5 +1,5 @@
 [package]
-name = "web3-test"
+name = "util"
 version = "0.1.0"
 edition = "2021"
 
@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 tokio = "1.20.1"
 web3 = "0.18.0"
+hex = "0.4.3"

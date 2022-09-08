@@ -1,4 +1,5 @@
 use std::env;
+extern crate hex;
 
 #[tokio::main]
 async fn balance() -> web3::Result<()> {
@@ -19,6 +20,12 @@ async fn balance() -> web3::Result<()> {
     Ok(())
 }
 
+fn method_selector(value: &str){
+    let hashed = web3::signing::keccak256(value.as_bytes());
+    let first_four_byte = &hashed[0..4];
+    let encoded = hex::encode(first_four_byte);
+    println!("Method Selector: 0x{}", encoded);
+}
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -27,6 +34,9 @@ fn main() {
         match args[1].as_str() {
             "balance" => {
                 let _result = balance();
+            }
+            "method_selector" => {
+                method_selector(&args[2]);
             }
 
             _ => {
