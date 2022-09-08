@@ -37,10 +37,10 @@ const contractAddress = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
 let signer = new ethers.Wallet(privateKey, provider);
 const UniswapV2Router02 = await new ethers.Contract(contractAddress, abi, signer);
 const path = [
+'0xc778417E063141139Fce010982780140Aa0cD5Ab',   //WETH
 '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',  //Uni
-'0xc778417E063141139Fce010982780140Aa0cD5Ab'   //WETH
 ]
-const amountOut = 100
+const amountOut = ethers.BigNumber.from("1000000000000000000");
 let amounts = await UniswapV2Router02.getAmountsIn(amountOut,path);
 let amountIn = amounts[0];
 console.log(amountIn);
