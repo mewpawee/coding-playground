@@ -1,0 +1,8 @@
+{
+  "name": "ts-cheatsheet",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "^0.2.0"
+  }
+}
